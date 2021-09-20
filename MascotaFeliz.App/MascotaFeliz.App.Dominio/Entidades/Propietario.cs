@@ -4,9 +4,9 @@ namespace MascotaFeliz.App.Dominio {
 
 
 	public class Propietario : Persona {
-		public int Id { get; set; }
+		public int IdPropietario { get; set; }
 
-		public Mascota Mascota { get; set }
+		public Mascota Mascota { get; set; }
 
 	}
 

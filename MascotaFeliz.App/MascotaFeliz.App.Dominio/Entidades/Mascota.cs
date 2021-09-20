@@ -2,7 +2,7 @@
 
 namespace MascotaFeliz.App.Dominio {
     
-	public class Mascota : Persona {
+	public class Mascota {
         
 		public int Id { get; set; }
         public string Nombre { get; set; }
@@ -11,7 +11,7 @@ namespace MascotaFeliz.App.Dominio {
         public string Raza { get; set; }
         public string Sexo { get; set;}
         public string Color { get; set;}
-        public boolean Afiliado { get; set; }
+        public bool Afiliado { get; set; }
 		// Relación entre Mascota y el registro de la visita
         public RegistroVisita RegistroVisita { get; set; }
 		// Relación entre Mascota y el Propietario

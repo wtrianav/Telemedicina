@@ -1,8 +1,4 @@
-﻿using System;
-
-namespace MascotaFeliz.App.Dominio {
-
-
+﻿
 using System;
 
 namespace MascotaFeliz.App.Dominio {
@@ -18,7 +14,7 @@ namespace MascotaFeliz.App.Dominio {
 		public EstadoAnimo EstadoAnimo { get; set; }
 		public string Medicamentos { get; set; }
 		public string Recomendaciones { get; set; }
-		
+
 		// Relación entre Mascota y RegistroVisita
 		public Mascota Mascota { get; set; }
 
