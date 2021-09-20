@@ -18,6 +18,8 @@ namespace MascotaFeliz.App.Dominio {
         public Propietario Propietario { get; set; }
 		// Relación entre Mascota y el Veterinario
         public Veterinario Veterinario { get; set; }
+        // Llave foránea proveniente de propietario
+        public int PropietarioId { get; set; }
 
     }
 }

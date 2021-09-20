@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MascotaFeliz.App.Dominio {
 
@@ -6,6 +7,7 @@ namespace MascotaFeliz.App.Dominio {
 		public string Especialidad { get; set; }
 		public string TarjetaProfesional { get; set; }
 		public Mascota Mascota { get; set; }
-		
+		// Relación de un veterinario a muchos registros
+		public List<RegistroVisita> RegistroVisitas { get; set; }
 	}
 }
