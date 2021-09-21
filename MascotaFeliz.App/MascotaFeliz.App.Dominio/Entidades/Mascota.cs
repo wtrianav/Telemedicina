@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MascotaFeliz.App.Dominio {
     
@@ -12,14 +13,9 @@ namespace MascotaFeliz.App.Dominio {
         public string Sexo { get; set;}
         public string Color { get; set;}
         public bool Afiliado { get; set; }
-		// Relación entre Mascota y el registro de la visita
-        public RegistroVisita RegistroVisita { get; set; }
-		// Relación entre Mascota y el Propietario
-        public Propietario Propietario { get; set; }
-		// Relación entre Mascota y el Veterinario
-        public Veterinario Veterinario { get; set; }
-        // Llave foránea proveniente de propietario
-        public int PropietarioId { get; set; }
 
+        public List<MascotaVeterinario> MascotaVeterinario;
+        public List<Veterinario> Veterinarios;
+        public List<RegistroVisita> Visitas;
     }
 }
