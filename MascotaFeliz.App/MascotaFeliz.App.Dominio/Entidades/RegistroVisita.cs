@@ -1,10 +1,13 @@
-﻿
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace MascotaFeliz.App.Dominio {
 
 	public class RegistroVisita {
 		public int Id { get; set; }
+		public int MascotaId { get; set; }
 		public string TarjetaProfesionalVeterinario { get; set; }
 		public DateTime FechaHora { get; set; }
 		public string Temperatura { get; set; }
