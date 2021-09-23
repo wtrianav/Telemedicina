@@ -2,11 +2,11 @@
 namespace MascotaFeliz.App.Dominio {
 
     public enum TipoMascota {
-        Perro,
-        Gato,
-        Loro,
-        Hamster
-
+        Canino,
+        Felino,
+        Ave,
+        Roedor,
+        pez
     }
 
 }

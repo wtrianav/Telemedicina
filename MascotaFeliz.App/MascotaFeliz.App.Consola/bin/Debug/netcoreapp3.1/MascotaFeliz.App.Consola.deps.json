@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "MascotaFeliz.App.Consola/1.0.0": {
         "dependencies": {
+          "MascotaFeliz.App.Dominio": "1.0.0",
           "MascotaFeliz.App.Persistencia": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0"
         },
