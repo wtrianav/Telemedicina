@@ -26,7 +26,7 @@ namespace MascotaFeliz.App.Persistencia {
         }
 
         void IRepositorioPropietario.DeletePropietario (int idPropietario) {
-            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(m => m.Id == idPropietario);
+            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
             if (propietarioEncontrado == null)
                 return;
             _appContext.Propietarios.Remove(propietarioEncontrado);
@@ -38,11 +38,11 @@ namespace MascotaFeliz.App.Persistencia {
         }
 
         Propietario IRepositorioPropietario.GetPropietario (int idPropietario) {
-            return _appContext.Propietarios.FirstOrDefault(m => m.Id == idPropietario);
+            return _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
         }
 
         Propietario IRepositorioPropietario.UpdatePropietario (Propietario propietario) {
-            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(m => m.Id == propietario.Id);
+            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.Id == propietario.Id);
             if (propietarioEncontrado != null) {
                 propietarioEncontrado.Cedula = propietario.Cedula;
                 propietarioEncontrado.Nombre = propietario.Nombre;

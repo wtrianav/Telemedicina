@@ -6,7 +6,7 @@ namespace MascotaFeliz.App.Dominio {
         Felino,
         Ave,
         Roedor,
-        pez
+        Pez
     }
 
 }

@@ -2,10 +2,14 @@
 namespace MascotaFeliz.App.Dominio {
 
     public enum EstadoAnimo {
+        Tranquilo,
+        Hiperactivo,
+        Asustado,
+        Nervioso,
+        Agresivo,
         Triste,
-        Decaído,
         Aislado,
-        Sin_Apetito,
+        SinApetito,
         Ansioso,
         Deprimido
     }
