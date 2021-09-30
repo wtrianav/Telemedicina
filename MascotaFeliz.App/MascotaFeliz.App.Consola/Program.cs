@@ -18,10 +18,17 @@ namespace MascotaFeliz.App.Consola {
             //AddVeterinario();
             //AddPropietario();
             //AddMascota();
-            AddMascotaVeterinario();
-            //BuscarPropietario(1);
+            //AddMascotaVeterinario();
+            BuscarPropietario(1);
             //BuscarMascota(1);
             
+            // Propietario Propietario = _repoPropietario.GetPropietario(1);
+            // if(Propietario != null) {
+            //     Console.WriteLine("El propietario " + Propietario.Nombre + " fue encontrado");
+            // }
+            // else {
+            //     Console.WriteLine("No encontró a nadie");
+            // }
 
         }
 
@@ -44,7 +51,7 @@ namespace MascotaFeliz.App.Consola {
         private static void BuscarPropietario (int idPropietario) {
 
             var propietario = _repoPropietario.GetPropietario(idPropietario);
-            Console.WriteLine("Propietario: " + propietario.Nombre + propietario.Apellido + " encontrado");
+            Console.WriteLine("El propietario " + propietario.Nombre + " " +propietario.Apellido + " fue encontrado");
 
         }
 
@@ -89,7 +96,6 @@ namespace MascotaFeliz.App.Consola {
         }
 
         // Pruebas MascotaVeterinario 
-
             private static void AddMascotaVeterinario () {
 
             var mascotaVeterinario = new MascotaVeterinario {

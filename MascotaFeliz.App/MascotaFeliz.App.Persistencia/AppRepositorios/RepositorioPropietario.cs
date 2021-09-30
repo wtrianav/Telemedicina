@@ -25,19 +25,29 @@ namespace MascotaFeliz.App.Persistencia {
             return propietarioAdicionado.Entity;
         }
 
-        void IRepositorioPropietario.DeletePropietario (int idPropietario) {
-            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
-            if (propietarioEncontrado == null)
-                return;
-            _appContext.Propietarios.Remove(propietarioEncontrado);
-            _appContext.SaveChanges();
-        }
+        bool IRepositorioPropietario.DeletePropietario (int idPropietario) {
+            bool deleted = false;
+            //Se busca el propietario que se va a eliminar
+            var propietario = _appContext.Propietarios.Find(idPropietario);
 
+            if (propietario != null) {
+                try {
+                    _appContext.Propietarios.Remove(propietario);
+                    _appContext.SaveChanges();
+                    deleted = true;
+                }
+                catch (System.Exception) { 
+                    deleted = false;
+                }
+            }
+            return deleted;
+        }  
+             
         IEnumerable<Propietario> IRepositorioPropietario.GetAllPropietarios() {
             return _appContext.Propietarios;
         }
 
-        Propietario IRepositorioPropietario.GetPropietario (int idPropietario) {
+        Propietario IRepositorioPropietario.GetPropietario(int idPropietario) {
             return _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
         }
 

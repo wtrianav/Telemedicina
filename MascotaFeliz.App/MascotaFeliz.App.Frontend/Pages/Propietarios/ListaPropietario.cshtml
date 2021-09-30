@@ -1,0 +1,108 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaPropietarioModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Formulario para la adición de propietarios</title>
+    <link rel="stylesheet" href="~/css/propietarios.css" />
+</head>
+
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Adición de propietarios</h1>
+        <p id="description" class="description text-center"> Ingresa los datos del propietario aquí.</p>
+    </header>
+
+    <form method="post" class="survey-form">
+        
+        <div class="form-group">
+            <label id="nombre-label" asp-for="Propietario.Nombre">Nombre</label>
+            <input type="text" asp-for="Propietario.Nombre" name="Propietario.Nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.Nombre"></span> *@
+        </div>
+
+        <div class="form-group">
+            <label id="apellido-label" asp-for="Propietario.Apellido">Apellido</label>
+            <input type="text" asp-for="Propietario.Apellido" name="Propietario.Apellido" id="apellido" class="form-control" placeholder="Ingrese el apellido">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.Apellido"></span> *@
+        </div>
+
+        <div class="form-group">
+            <label id="cedula-label" asp-for="Propietario.Cedula">Cédula</label>
+            <input type="text" asp-for="Propietario.Cedula" name="Propietario.Cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.Cedula"></span> *@
+        </div>
+
+        <div class="form-group">
+            <label id="telefono-label" asp-for="Propietario.NumeroTelefono">Número Teléfono</label>
+            <input type="text" asp-for="Propietario.NumeroTelefono" name="Propietario.NumeroTelefono" id="telefono" class="form-control" placeholder="Ingrese el número de teléfono">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.NumeroTelefono"></span> *@
+        </div>
+
+        <div class="form-group">
+            <label id="direccion-label" asp-for="Propietario.Direccion">Dirección</label>
+            <input type="text" asp-for="Propietario.Direccion" name="Propietario.Direccion" id="direccion" class="form-control" placeholder="Ingrese la dirección">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.Direccion"></span> *@
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" asp-for="Propietario.Email">Email</label>
+            <input type="email" asp-for="Propietario.Email" name="Propietario.Email" id="email" class="form-control" placeholder="Ingrese el email">
+            @* <span class="badge bg-red" asp-validation-for="Propietario.Email"></span> *@
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Adicionar</button>
+        </div>
+    </form>
+
+    <form asp-action="ListaPropietario" method="post">
+        <div class="form-actions no-color">
+            <p>
+                <input type="submit" value="Buscar" class="btn btn-primary"/>
+                <input type="text" name="GetPropietario" value=""/>
+            </p>
+        </div>
+    </form>
+
+    <table class="table table-bordered" id="table">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Id</th>
+                <th style="text-align: center;">Cédula</th>
+                <th style="text-align: center;">Nombre</th>
+                <th style="text-align: center;">Apellido</th>
+                <th style="text-align: center;">Número Teléfono</th>
+                <th style="text-align: center;">Dirección</th>
+                <th style="text-align: center;">Email</th>
+                <th style="text-align: center;" colspan="2">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var Propietario in Model.Propietarios) {
+                
+                <tr>
+                    <td style="text-align: center;">@Propietario.Id</td>
+                    <td style="text-align: center;">@Propietario.Cedula</td>
+                    <td style="text-align: center;">@Propietario.Nombre</td>
+                    <td style="text-align: center;">@Propietario.Apellido</td>
+                    <td style="text-align: center;">@Propietario.NumeroTelefono</td>
+                    <td style="text-align: center;">@Propietario.Direccion</td>
+                    <td style="text-align: center;">@Propietario.Email</td>
+                    <td>
+                        <a class="btn btn-primary table-btn" asp-page="./EditarPropietario" asp-route-id="@Propietario.Id">Editar</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary table-btn" onclick="return confirm('¿Desea eliminar este registo?')" asp-page-handler="DeletePropietario" asp-route-id="@Propietario.Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    
+</div>

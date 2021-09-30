@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MascotaFeliz.App.Persistencia;
 
 namespace MascotaFeliz.App.Frontend
 {
@@ -24,6 +25,8 @@ namespace MascotaFeliz.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddScoped<IRepositorioPropietario, RepositorioPropietario>();
+            services.AddDbContext<MascotaFeliz.App.Persistencia.AppContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
