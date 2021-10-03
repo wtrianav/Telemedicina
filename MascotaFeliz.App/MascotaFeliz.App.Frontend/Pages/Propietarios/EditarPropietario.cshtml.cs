@@ -20,7 +20,6 @@ namespace MascotaFeliz.App.Frontend.Pages {
             this._repoPropietario = repoPropietario;
         }
         
-        //public void OnGet(int idPropietario) {
         public IActionResult OnGet(int id) {
             Propietario = _repoPropietario.GetPropietario(id);
                 // Console.WriteLine(id);
@@ -29,7 +28,7 @@ namespace MascotaFeliz.App.Frontend.Pages {
 
         public IActionResult OnPost() {
             Propietario = _repoPropietario.UpdatePropietario(Propietario);
-            return Page();
+            return RedirectToPage("./ListaPropietario");
         }
     }        
 }

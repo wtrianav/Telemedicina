@@ -41,7 +41,6 @@ namespace MascotaFeliz.App.Frontend.Pages
                 Direccion = Propietario.Direccion,
                 Email = Propietario.Email
             });
-            
         }
 
         public IActionResult OnGetDeletePropietario(int Id) {
@@ -49,9 +48,9 @@ namespace MascotaFeliz.App.Frontend.Pages
             return Redirect("ListaPropietario");
         }
 
-        private IActionResult OnGetGetPropietario(int Id) {
-            _repoPropietario.GetPropietario(Id);
-            return Redirect("ListaPropietario");
-        }
+        // private IActionResult OnGetGetPropietario(int Id) {
+        //     _repoPropietario.GetPropietario(Id);
+        //     return Redirect("ListaPropietario");
+        // }
     }
 }
