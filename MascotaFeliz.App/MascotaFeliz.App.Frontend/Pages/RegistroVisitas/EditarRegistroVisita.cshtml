@@ -1,0 +1,93 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditarRegistroVisitaModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Formulario para la modificación del registro de visitas</title>
+    @* <link rel="stylesheet" href="~/css/propietarios.css" /> *@
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="contenedor">
+    <header class="header">
+        <h1 id="title" class="text-center">Actualización del registro de visitas</h1>
+        <p id="description" class="description text-center">Modifica el registro de la visita aquí.</p>
+    </header>
+
+    <form method="post" class="grid2-form">
+        <input asp-for="RegistroVisita.Id" type="hidden"/>
+        
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.MascotaId" class="control-label">Id de la Mascota</label>
+            <input type="number" asp-for="RegistroVisita.MascotaId" id="MascotaId" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.TarjetaProfesionalVeterinario" class="control-label">Veterinario</label>
+            <input type="number" asp-for="RegistroVisita.TarjetaProfesionalVeterinario" id="TarjetaProfesionalVeterinario" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FechaHora" class="control-label">Fecha de la visita</label>
+            <input type="date" asp-for="RegistroVisita.FechaHora" id="FechaHora" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Temperatura" class="control-label">Temperatura</label>
+            <input type="number" asp-for="RegistroVisita.Temperatura" id="Temperatura" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Peso" class="control-label">Peso</label>
+            <input type="number" asp-for="RegistroVisita.Peso" id="Peso" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FrecuenciaRespiratoria" class="control-label">Frecuencia Respiratoria</label>
+            <input type="text" asp-for="RegistroVisita.FrecuenciaRespiratoria" id="FrecuenciaRespiratoria" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FrecuenciaCardiaca" class="control-label">Frecuencia Cardiaca</label>
+            <input type="text" asp-for="RegistroVisita.FrecuenciaCardiaca" id="FrecuenciaCardiaca" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.EstadoAnimo" class="control-label">Estado de ánimo</label>
+            <select type="text" asp-for="RegistroVisita.EstadoAnimo" id="EstadoAnimo" class="form-control" required="">
+                <option disabled="" value="">Seleccione el estado de ánimo</option>
+                <option value="0">Tranquilo</option>
+                <option value="1">Hiperactivo</option>
+                <option value="2">Asustado</option>
+                <option value="3">Nervioso</option>
+                <option value="4">Agresivo</option>
+                <option value="5">Triste</option>
+                <option value="6">Aislado</option>
+                <option value="7">Sin apetito</option>
+                <option value="8">Ansioso</option>
+                <option value="9">Deprimido</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Medicamentos" class="control-label">Medicamentos</label>
+            <input type="text" asp-for="RegistroVisita.Medicamentos" id="Medicamentos" class="form-control">
+        </div>
+
+        <div class="form-group-full">
+            <label id="label" asp-for="RegistroVisita.Recomendaciones" class="control-label">Recomendaciones</label>
+            <textarea type="text-area" asp-for="RegistroVisita.Recomendaciones" id="Recomendaciones" class="input-textarea">
+                </textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Modificar</button>
+        </div>
+    </form>
+
+</div>

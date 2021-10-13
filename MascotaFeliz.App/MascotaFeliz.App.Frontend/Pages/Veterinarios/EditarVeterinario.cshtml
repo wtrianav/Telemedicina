@@ -1,0 +1,54 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditarVeterinarioModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Formulario para la modificación de veterinarios</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Actualización de veterinarios</h1>
+        <p id="description" class="description text-center">Modifica los datos del veterinario aquí.</p>
+    </header>
+
+    <form method="post" class="survey-form">
+        <input asp-for="Veterinario.Id" type="hidden"/>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Nombre" class="control-label">Nombre</label>
+            <input asp-for="Veterinario.Nombre" id="nombre" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Apellido" class="control-label">Apellido</label>
+            <input asp-for="Veterinario.Apellido" id="apellido" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.TarjetaProfesionalVeterinario" class="control-label">Tarjeta Profesional</label>
+            <input asp-for="Veterinario.TarjetaProfesionalVeterinario" id="tarjeta-profesional" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.NumeroTelefono" class="control-label">Número Teléfono</label>
+            <input asp-for="Veterinario.NumeroTelefono" id="telefono" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Email" class="control-label">Email</label>
+            <input asp-for="Veterinario.Email" id="email" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Modificar</button>
+        </div>
+    </form>
+
+</div>

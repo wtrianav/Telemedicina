@@ -83,6 +83,7 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cedula")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")

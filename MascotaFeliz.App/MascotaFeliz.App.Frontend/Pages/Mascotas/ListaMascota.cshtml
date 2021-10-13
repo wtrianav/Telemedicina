@@ -1,0 +1,129 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaMascotaModel
+@{
+    ViewData["Title"] = "Mascotas";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario para la adición de propietarios</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="contenedor">
+    <header class="header">
+        <h1 id="title" class="text-center">Adición de mascotas</h1>
+        <p id="description" class="description text-center"> Ingresa los datos de la mascota aquí.</p>
+    </header>
+
+    <form method="post" class="grid3-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.PropietarioId">Id del propietario</label>
+            <input type="number" asp-for="Mascota.PropietarioId" name="Mascota.PropietarioId" id="nombre" class="form-control" placeholder="Ingrese el id del propietario">
+            <span asp-validation-for="Mascota.PropietarioId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.Nombre">Nombre</label>
+            <input type="text" asp-for="Mascota.Nombre" name="Mascota.Nombre" id="apellido" class="form-control" placeholder="Ingrese el nombre de la mascota">
+            <span asp-validation-for="Mascota.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.FechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" asp-for="Mascota.FechaNacimiento" name="Mascota.FechaNacimiento" id="fecha-nacimiento" class="form-control" placeholder="">
+            <span asp-validation-for="Mascota.FechaNacimiento" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.TipoMascota">Tipo</label>
+            <select asp-for="Mascota.TipoMascota" name="Mascota.TipoMascota" id="dropdown" class="form-control" required="">
+                <option disabled="" selected="" value="">Seleccione el tipo de mascota</option>
+                <option value="Canino">Canino</option>
+                <option value="Felino">Felino</option>
+                <option value="Ave">Ave</option>
+                <option value="Roedor">Roedor</option>
+                <option value="Pez">Pez</option>
+            </select>
+            <span asp-validation-for="Mascota.TipoMascota" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.Raza">Raza</label>
+            <input type="text" asp-for="Mascota.Raza" name="Mascota.Raza" id="raza" class="form-control" placeholder="Ingrese la raza de la mascota">
+            <span asp-validation-for="Mascota.Raza" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.Sexo">Sexo</label>
+            <select asp-for="Mascota.Sexo" name="Mascota.Sexo" id="dropdown" class="form-control" required="">
+                <option disabled="" selected="" value="">Selecciona una opción</option>
+                <option value="0">Macho</option>
+                <option value="1">Hembra</option>
+            </select>
+            <span asp-validation-for="Mascota.Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.Color">Color</label>
+            <input type="text" asp-for="Mascota.Color" name="Mascota.Color" id="color" class="form-control" placeholder="Ingrese el color de la mascota">
+            <span asp-validation-for="Mascota.Color" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Mascota.Afiliado">Afiliado</label>
+            <input type="text" asp-for="Mascota.Afiliado" name="Mascota.Afiliado" id="afiliado" class="form-control" placeholder="Ingrese 'True' o  'False'">
+            <span asp-validation-for="Mascota.Afiliado" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Adicionar</button>
+        </div>
+    </form>
+
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Id</th>
+                <th style="text-align: center;">PropietarioId</th>
+                <th style="text-align: center;">Nombre</th>
+                <th style="text-align: center;">Fecha Nacimiento</th>
+                <th style="text-align: center;">Tipo Mascota</th>
+                <th style="text-align: center;">Raza</th>
+                <th style="text-align: center;">Sexo</th>
+                <th style="text-align: center;">Color</th>
+                <th style="text-align: center;">Afiliado</th>
+                <th style="text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var Mascota in Model.Mascotas) {
+                
+                <tr>
+                    <td style="text-align: center;">@Mascota.Id</td>
+                    <td style="text-align: center;">@Mascota.PropietarioId</td>
+                    <td style="text-align: center;">@Mascota.Nombre</td>
+                    <td style="text-align: center;">@Mascota.FechaNacimiento</td>
+                    <td style="text-align: center;">@Mascota.TipoMascota</td>
+                    <td style="text-align: center;">@Mascota.Raza</td>
+                    <td style="text-align: center;">@Mascota.Sexo</td>
+                    <td style="text-align: center;">@Mascota.Color</td>
+                    <td style="text-align: center;">@Mascota.Afiliado</td>
+                    <td>
+                        <a class="btn btn-primary table-btn" asp-page="./EditarMascota" asp-route-id="@Mascota.Id">Editar</a>
+                        <a class="btn btn-primary table-btn" onclick="return confirm('¿Desea eliminar este registo?')" asp-page-handler="DeleteMascota" asp-route-id="@Mascota.Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    @section Scripts { 
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } 
+    }
+    
+</div>

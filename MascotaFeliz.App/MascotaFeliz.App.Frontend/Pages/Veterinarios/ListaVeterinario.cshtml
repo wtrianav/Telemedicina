@@ -1,0 +1,95 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaVeterinarioModel
+@{
+    ViewData["Title"] = "Veterinarios";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario para la adición de Veterinarios</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="contenedor">
+    <header class="header">
+        <h1 id="title" class="text-center">Adición de veterinarios</h1>
+        <p id="description" class="description text-center"> Ingresa los datos del veterinario aquí.</p>
+    </header>
+
+    <form method="post" class="survey-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Nombre">Nombre</label>
+            <input type="text" asp-for="Veterinario.Nombre" name="Veterinario.Nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre">
+            <span asp-validation-for="Veterinario.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Apellido">Apellido</label>
+            <input type="text" asp-for="Veterinario.Apellido" name="Veterinario.Apellido" id="apellido" class="form-control" placeholder="Ingrese el apellido">
+            <span asp-validation-for="Veterinario.Apellido" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.TarjetaProfesionalVeterinario">Tarjeta Profesional</label>
+            <input type="text" asp-for="Veterinario.TarjetaProfesionalVeterinario" name="Veterinario.TarjetaProfesionalVeterinario" id="tarjeta-profesional" class="form-control" placeholder="Ingrese el número de la tarjeta">
+            <span asp-validation-for="Veterinario.TarjetaProfesionalVeterinario" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.NumeroTelefono">Número Teléfono</label>
+            <input type="text" asp-for="Veterinario.NumeroTelefono" name="Veterinario.NumeroTelefono" id="telefono" class="form-control" placeholder="Ingrese el número de teléfono">
+            <span asp-validation-for="Veterinario.NumeroTelefono" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="Veterinario.Email">Email</label>
+            <input type="email" asp-for="Veterinario.Email" name="Veterinario.Email" id="email" class="form-control" placeholder="Ingrese el email">
+            <span asp-validation-for="Veterinario.Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Adicionar</button>
+        </div>
+    </form>
+
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Id</th>
+                <th style="text-align: center;">Nombre</th>
+                <th style="text-align: center;">Apellido</th>
+                <th style="text-align: center;">Tarjeta Profesional</th>
+                <th style="text-align: center;">Número Teléfono</th>
+                <th style="text-align: center;">Email</th>
+                <th style="text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var Veterinario in Model.Veterinarios) {
+                
+                <tr>
+                    <td style="text-align: center;">@Veterinario.Id</td>
+                    <td style="text-align: center;">@Veterinario.Nombre</td>
+                    <td style="text-align: center;">@Veterinario.Apellido</td>
+                    <td style="text-align: center;">@Veterinario.TarjetaProfesionalVeterinario</td>
+                    <td style="text-align: center;">@Veterinario.NumeroTelefono</td>
+                    <td style="text-align: center;">@Veterinario.Email</td>
+                    <td>
+                        <a class="btn btn-primary table-btn" asp-page="./EditarVeterinario" asp-route-id="@Veterinario.Id">Editar</a>
+                        <a class="btn btn-primary table-btn" onclick="return confirm('¿Desea eliminar este registo?')" asp-page-handler="DeleteVeterinario" asp-route-id="@Veterinario.Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    @section Scripts { 
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } 
+    }
+    
+</div>

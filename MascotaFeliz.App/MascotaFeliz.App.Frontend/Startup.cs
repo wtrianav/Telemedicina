@@ -26,6 +26,9 @@ namespace MascotaFeliz.App.Frontend
         {
             services.AddRazorPages();
             services.AddScoped<IRepositorioPropietario, RepositorioPropietario>();
+            services.AddScoped<IRepositorioMascota, RepositorioMascota>();
+            services.AddScoped<IRepositorioVeterinario, RepositorioVeterinario>();
+            services.AddScoped<IRepositorioRegistroVisita, RepositorioRegistroVisita>();
             services.AddDbContext<MascotaFeliz.App.Persistencia.AppContext>();
         }
 

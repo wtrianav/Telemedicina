@@ -81,3 +81,9 @@ C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.
 C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Frontend.genruntimeconfig.cache
 C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\EditarPropietario.cshtml.g.cs
 C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\ListaPropietario.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\EditarMascota.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ListaMascota.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroVisitas\EditarRegistroVisita.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\RegistroVisitas\ListaRegistroVisita.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\EditarVeterinario.cshtml.g.cs
+C:\Veterinaria\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\ListaVeterinario.cshtml.g.cs

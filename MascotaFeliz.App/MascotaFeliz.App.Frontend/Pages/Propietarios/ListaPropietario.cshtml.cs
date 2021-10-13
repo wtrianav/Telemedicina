@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
 
-namespace MascotaFeliz.App.Frontend.Pages
-{
+namespace MascotaFeliz.App.Frontend.Pages {
     public class ListaPropietarioModel : PageModel {
     
     private readonly IRepositorioPropietario _repoPropietario;
@@ -22,6 +21,9 @@ namespace MascotaFeliz.App.Frontend.Pages
         }
 
         public ActionResult OnPost() {
+            if(!ModelState.IsValid) {
+                return RedirectToPage("ListaPropietario");
+            }
             AddPropietario();
             return RedirectToPage("ListaPropietario");
         }
@@ -47,10 +49,5 @@ namespace MascotaFeliz.App.Frontend.Pages
             _repoPropietario.DeletePropietario(Id);
             return Redirect("ListaPropietario");
         }
-
-        // private IActionResult OnGetGetPropietario(int Id) {
-        //     _repoPropietario.GetPropietario(Id);
-        //     return Redirect("ListaPropietario");
-        // }
     }
 }

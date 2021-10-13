@@ -1,0 +1,29 @@
+header {
+  position: relative;
+}
+
+.logo {
+  width: 60px;
+  margin-left: 150px;
+}
+
+a.navbar-brand {
+  font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 600;
+  margin-right: 60px;
+}
+
+.navbar-nav {
+  font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.footer {
+  width: 100%;
+  line-height: 80px; /* Vertically center the text there */
+  margin-top: 60px;
+}
+

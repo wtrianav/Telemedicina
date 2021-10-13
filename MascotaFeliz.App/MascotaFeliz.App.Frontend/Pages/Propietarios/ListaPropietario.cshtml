@@ -1,58 +1,60 @@
 ﻿@page
 @model MascotaFeliz.App.Frontend.Pages.ListaPropietarioModel
 @{
+    ViewData["Title"] = "Propietarios";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Formulario para la adición de propietarios</title>
-    <link rel="stylesheet" href="~/css/propietarios.css" />
+    <title>Formulario para la adición de propietarios</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
 </head>
 
-<div class="container">
+<div class="contenedor">
     <header class="header">
         <h1 id="title" class="text-center">Adición de propietarios</h1>
         <p id="description" class="description text-center"> Ingresa los datos del propietario aquí.</p>
     </header>
 
     <form method="post" class="survey-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         
         <div class="form-group">
             <label id="label" asp-for="Propietario.Nombre">Nombre</label>
             <input type="text" asp-for="Propietario.Nombre" name="Propietario.Nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.Nombre"></span> *@
+            <span asp-validation-for="Propietario.Nombre" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label id="label" asp-for="Propietario.Apellido">Apellido</label>
             <input type="text" asp-for="Propietario.Apellido" name="Propietario.Apellido" id="apellido" class="form-control" placeholder="Ingrese el apellido">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.Apellido"></span> *@
+            <span asp-validation-for="Propietario.Apellido" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label id="label" asp-for="Propietario.Cedula">Cédula</label>
             <input type="text" asp-for="Propietario.Cedula" name="Propietario.Cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.Cedula"></span> *@
+            <span asp-validation-for="Propietario.Cedula" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label id="label" asp-for="Propietario.NumeroTelefono">Número Teléfono</label>
             <input type="text" asp-for="Propietario.NumeroTelefono" name="Propietario.NumeroTelefono" id="telefono" class="form-control" placeholder="Ingrese el número de teléfono">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.NumeroTelefono"></span> *@
+            <span asp-validation-for="Propietario.NumeroTelefono" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label id="label" asp-for="Propietario.Direccion">Dirección</label>
             <input type="text" asp-for="Propietario.Direccion" name="Propietario.Direccion" id="direccion" class="form-control" placeholder="Ingrese la dirección">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.Direccion"></span> *@
+            <span asp-validation-for="Propietario.Direccion" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label id="label" asp-for="Propietario.Email">Email</label>
             <input type="email" asp-for="Propietario.Email" name="Propietario.Email" id="email" class="form-control" placeholder="Ingrese el email">
-            @* <span class="badge bg-red" asp-validation-for="Propietario.Email"></span> *@
+            <span asp-validation-for="Propietario.Email" class="text-danger"></span>
         </div>
 
         <div class="form-group">
@@ -93,5 +95,9 @@
         </tbody>
 
     </table>
+
+    @section Scripts { 
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } 
+    }
     
 </div>

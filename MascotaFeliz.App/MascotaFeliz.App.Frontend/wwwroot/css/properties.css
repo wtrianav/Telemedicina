@@ -1,0 +1,108 @@
+
+.header {
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.description {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-style: italic;
+}
+
+/* CSS del formulario */
+
+.survey-form {
+    width: 500px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: rgb(245, 245, 245);
+    color: #495057;
+    padding: 2.5rem 3.5rem 1.5rem 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin: auto auto 30px auto;
+}
+
+.grid2-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 1000px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: rgb(245, 245, 245);
+    color: #495057;
+    padding: 2.5rem 3.5rem 1.5rem 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin: auto auto 30px auto;
+}
+
+.grid3-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+    width: 800px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: rgb(245, 245, 245);
+    color: #495057;
+    padding: 2.5rem 3.5rem 1.5rem 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin: auto auto 30px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group-full {
+    grid-column: 1 / 4;
+    border-radius: 10px;
+  }
+
+.form-control {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+#label {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    margin-bottom: 4px;        
+}
+
+.input-textarea {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+    border-radius: 0.5rem;
+}
+
+
+/* CSS de la tabla */
+
+#example {
+    border: 1px solid #ccc;
+}
+
+.btn-primary {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.contenedor {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+

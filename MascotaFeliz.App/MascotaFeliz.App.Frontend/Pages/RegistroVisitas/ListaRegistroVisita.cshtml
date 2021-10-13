@@ -1,0 +1,147 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaRegistroVisitaModel
+@{
+    ViewData["Title"] = "Registro de visitas";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario para el registro de visitas</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="contenedor">
+    <header class="header">
+        <h1 id="title" class="text-center">Registros de visitas</h1>
+        <p id="description" class="description text-center"> Ingresa los datos de la visita.</p>
+    </header>
+
+    <form method="post" class="grid2-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.MascotaId">Id de la Mascota</label>
+            <input type="number" asp-for="RegistroVisita.MascotaId" name="MascotaId" id="MascotaId" class="form-control" placeholder="Ingrese el id de la mascota">
+            <span asp-validation-for="RegistroVisita.MascotaId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.TarjetaProfesionalVeterinario">Veterinario</label>
+            <input type="number" asp-for="RegistroVisita.TarjetaProfesionalVeterinario" name="TarjetaProfesionalVeterinario" id="TarjetaProfesionalVeterinario" class="form-control" placeholder="Ingrese la tarjeta profesional">
+            <span asp-validation-for="RegistroVisita.TarjetaProfesionalVeterinario" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FechaHora">Fecha de la visita</label>
+            <input type="date" asp-for="RegistroVisita.FechaHora" name="FechaHora" id="FechaHora" class="form-control" placeholder="Ingrese la fecha de la visita">
+            <span asp-validation-for="RegistroVisita.FechaHora" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Temperatura">Temperatura</label>
+            <input type="number" asp-for="RegistroVisita.Temperatura" name="Temperatura" id="Temperatura" class="form-control" placeholder="Ingrese la temperatura">
+            <span asp-validation-for="RegistroVisita.Temperatura" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Peso">Peso</label>
+            <input type="number" asp-for="RegistroVisita.Peso" name="Peso" id="Peso" class="form-control" placeholder="Ingrese el peso">
+            <span asp-validation-for="RegistroVisita.Peso" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FrecuenciaRespiratoria">Frecuencia Respiratoria</label>
+            <input type="text" asp-for="RegistroVisita.FrecuenciaRespiratoria" name="FrecuenciaRespiratoria" id="FrecuenciaRespiratoria" class="form-control" placeholder="Ingrese la frecuencia respiratoria">
+            <span asp-validation-for="RegistroVisita.FrecuenciaRespiratoria" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.FrecuenciaCardiaca">Frecuencia Cardiaca</label>
+            <input type="text" asp-for="RegistroVisita.FrecuenciaCardiaca" name="FrecuenciaCardiaca" id="FrecuenciaCardiaca" class="form-control" placeholder="Ingrese la frecuencia cardiaca">
+            <span asp-validation-for="RegistroVisita.FrecuenciaCardiaca" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.EstadoAnimo">Estado de ánimo</label>
+            <select type="text" asp-for="RegistroVisita.EstadoAnimo" name="EstadoAnimo" id="EstadoAnimo" class="form-control" required="">
+                <option disabled="" selected="" value="">Seleccione el estado de ánimo</option>
+                <option value="Tranquilo">Tranquilo</option>
+                <option value="Hiperactivo">Hiperactivo</option>
+                <option value="Asustado">Asustado</option>
+                <option value="Nervioso">Nervioso</option>
+                <option value="Agresivo">Agresivo</option>
+                <option value="Triste">Triste</option>
+                <option value="Aislado">Aislado</option>
+                <option value="Sin apetito">Sin apetito</option>
+                <option value="Ansioso">Ansioso</option>
+                <option value="Deprimido">Deprimido</option>
+            </select>
+            <span asp-validation-for="RegistroVisita.EstadoAnimo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="label" asp-for="RegistroVisita.Medicamentos">Medicamentos</label>
+            <input type="text" asp-for="RegistroVisita.Medicamentos" name="Medicamentos" id="Medicamentos" class="form-control" placeholder="Ingrese los medicamentos">
+            <span asp-validation-for="RegistroVisita.Medicamentos" class="text-danger"></span>
+        </div>
+
+        <div class="form-group-full">
+            <label id="label" asp-for="RegistroVisita.Recomendaciones">Recomendaciones</label>
+            <textarea type="text-area" asp-for="RegistroVisita.Recomendaciones" name="Recomendaciones" id="Recomendaciones" class="input-textarea" placeholder="Ingrese las recomendaciones aquí...">
+            </textarea>
+            <span asp-validation-for="RegistroVisita.Recomendaciones" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Adicionar</button>
+        </div>
+    </form>
+
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr class="registers">
+                <th style="text-align: center;">MascotaId</th>
+                <th style="text-align: center;">Veterinario</th>
+                <th style="text-align: center;">Fecha Visita</th>
+                <th style="text-align: center;">Temperatura (°C)</th>
+                <th style="text-align: center;">Peso (Kg)</th>
+                <th style="text-align: center;">Frecuencia Respiratoria</th>
+                <th style="text-align: center;">Frecuencia Cardiaca</th>
+                <th style="text-align: center;">Estado Animo</th>
+                <th style="text-align: center;">Medicamentos</th>
+                <th style="text-align: center;">Recomendaciones</th>
+                <th style="text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var RegistroVisita in Model.RegistrosVisitas) {
+                
+                <tr>
+                    <td style="text-align: center;">@RegistroVisita.MascotaId</td>
+                    <td style="text-align: center;">@RegistroVisita.TarjetaProfesionalVeterinario</td>
+                    <td style="text-align: center;">@RegistroVisita.FechaHora</td>
+                    <td style="text-align: center;">@RegistroVisita.Temperatura</td>
+                    <td style="text-align: center;">@RegistroVisita.Peso</td>
+                    <td style="text-align: center;">@RegistroVisita.FrecuenciaRespiratoria</td>
+                    <td style="text-align: center;">@RegistroVisita.FrecuenciaCardiaca</td>
+                    <td style="text-align: center;">@RegistroVisita.EstadoAnimo</td>
+                    <td style="text-align: center;">@RegistroVisita.Medicamentos</td>
+                    <td style="text-align: center;">@RegistroVisita.Recomendaciones</td>
+                    <td>
+                        <a class="btn btn-primary table-btn" asp-page="./EditarRegistroVisita" asp-route-id="@RegistroVisita.Id">Editar</a>
+                        <a class="btn btn-primary table-btn" onclick="return confirm('¿Desea eliminar este registo?')" asp-page-handler="DeleteRegistroVisita" asp-route-id="@RegistroVisita.Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    
+    @section Scripts { 
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); } 
+    }
+    
+</div>

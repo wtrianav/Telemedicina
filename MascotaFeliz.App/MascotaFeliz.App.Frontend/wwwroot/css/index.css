@@ -1,0 +1,204 @@
+
+h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.contact-us {
+    text-align: center;
+    margin: 120px auto 30px auto;
+}
+
+.text-contact-us {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.our-services {
+    grid-column: 1 / 5;
+    margin: auto;
+}
+
+p {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+}
+
+.illustration {
+  width: 100%;
+}
+
+.photos {
+    width: 30%;
+}
+
+
+.head-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 540px);
+    gap: 100px;
+    place-content: center;
+    background-size: initial;
+    background-position: bottom center;
+    background-image: url(../images/backgrounds/background-1.png),linear-gradient(
+    221deg,#ff8e8e 0%,rgba(255,112,0,0.2) 42%)!important;
+}
+
+.img-mascota {
+    margin-top: 60px;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 540px);
+    gap: 100px;
+    place-content: center;
+    background-size: initial;
+    background-image: url(../images/backgrounds/background-3.png),linear-gradient(
+    221deg,#ff8e8e 0%,rgba(255,112,0,0.2) 60%)!important;
+    margin-top: 100px;
+}
+
+.img-vet {
+    width: 70%;
+}
+
+/* INICIO GRILLA DE TARJETAS */
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 40px;
+    margin: 50px 50px 30px 50px;
+    place-content: center;
+}
+
+h3 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(45, 45, 45, 0.1);
+    border-radius: 5px;
+}
+
+.icon {
+    width: 50%;
+    margin-left: 60px;
+}
+
+.links {
+    margin-right: 20px;
+    text-align: center;
+}
+
+#thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.cardContent {
+    padding: 10px;
+}
+
+.cardLinks {
+    margin-left: 60px;
+}
+
+.text-center {
+    margin: auto;
+}
+
+.btn-primary {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+/* FIN GRILLA DE TARJETAS */
+
+
+/* INICIO BARRAS HORIZONTALES */
+
+.et_pb_text_2 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(90deg,#316eff 50%,#1d2b60 100%);
+    border-radius: 80px 80px 80px 80px;
+    overflow: hidden;
+    padding-top: 16px!important;
+    padding-right: 30px!important;
+    padding-bottom: 16px!important;
+    padding-left: 30px!important;
+    margin-bottom: 0px!important;
+    margin-top: -20px;
+    width: 84%;
+    box-shadow: 0px 12px 18px -6px rgb(49 110 255 / 40%);
+    transition: padding 300ms ease 0ms,box-shadow 300ms ease 0ms,width 300ms ease 0ms;
+}
+
+.et_pb_text_3 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(90deg,rgba(0,229,198,0) 30%,#00e5c6 100%);
+    border-radius: 80px 80px 80px 80px;
+    overflow: hidden;
+    padding-top: 16px!important;
+    padding-right: 30px!important;
+    padding-bottom: 16px!important;
+    padding-left: 30px!important;
+    width: 84%;
+    transition: padding 300ms ease 0ms,box-shadow 300ms ease 0ms,width 300ms ease 0ms;
+}
+
+.et_pb_text_3.et_pb_module {
+    margin-left: auto!important;
+    margin-right: 0px!important;
+}
+
+.et_pb_text_3.et_pb_text {
+    color: #121f60!important;
+}
+
+.et_pb_module.et_pb_text_align_right {
+    text-align: right;
+}
+
+.et_pb_text_inner {
+    position: relative
+}
+
+.et_pb_bg_layout_dark {
+    color: #fff!important;
+}
+
+.et_clickable {
+    cursor: pointer;
+}
+
+/* FIN BARRAS HORIZONTALES */
+
+
+
+
+
+
+
