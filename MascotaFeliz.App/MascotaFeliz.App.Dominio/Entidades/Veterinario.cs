@@ -8,12 +8,12 @@ namespace MascotaFeliz.App.Dominio {
         [Required(ErrorMessage = "Este campo es obligatorio.")]
 		[MaxLength(25, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
 		[MinLength(3, ErrorMessage = "Escriba un mínimo de {1} caracteres.")]
-		[RegularExpression("[A-Z a-z]*", ErrorMessage = "Solo se permiten letras")]
+		[RegularExpression("[A-Za-z ñÑ ÁáÉéÍíÓóÚú]*", ErrorMessage = "Solo se permiten letras")]
         public string Nombre { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio.")]
 		[MaxLength(25, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
 		[MinLength(3, ErrorMessage = "Escriba un mínimo de {1} caracteres.")]
-		[RegularExpression("[A-Z a-z]*", ErrorMessage = "Solo se permiten letras")]
+		[RegularExpression("[A-Za-z ñÑ ÁáÉéÍíÓóÚú]*", ErrorMessage = "Solo se permiten letras")]
         public string Apellido { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio.")]
 		[MaxLength(8, ErrorMessage = "Escriba un máximo de {1} caracteres.")]

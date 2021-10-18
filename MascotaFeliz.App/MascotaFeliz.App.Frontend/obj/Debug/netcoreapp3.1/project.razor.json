@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\Mascotas\\Registros\\ListaRegistros.cshtml",
+      "TargetPath": "Pages\\Mascotas\\Registros\\ListaRegistros.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

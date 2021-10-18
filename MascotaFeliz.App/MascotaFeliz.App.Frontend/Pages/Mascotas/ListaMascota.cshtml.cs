@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
+using System;
 
 namespace MascotaFeliz.App.Frontend.Pages
 {
@@ -35,7 +36,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         }
 
         private void AddMascota () {
-
+            
             _repoMascota.AddMascota(new Mascota {
                 PropietarioId = Mascota.PropietarioId,
                 Nombre = Mascota.Nombre,

@@ -17,15 +17,14 @@ namespace MascotaFeliz.App.Dominio {
         [DataType(DataType.Date)]
 		public DateTime FechaHora { get; set; }
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
-		[MaxLength(2, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
+		[MaxLength(3, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
 		[MinLength(2, ErrorMessage = "Escriba un mínimo de {1} caracteres.")]
-		[Range(35, 40)]
 		[RegularExpression("[0-9]*", ErrorMessage = "Solo se permiten números")]
 		public string Temperatura { get; set; }
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
-		[MaxLength(3, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
-		[MinLength(1, ErrorMessage = "Escriba un mínimo de {1} caracteres.")]
-		[RegularExpression("[0-9]*", ErrorMessage = "Solo se permiten números")]
+		// [MaxLength(3, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
+		// [MinLength(1, ErrorMessage = "Escriba un mínimo de {1} caracteres.")]
+		// [RegularExpression("^[0-9]+([.][0-9]+)?$", ErrorMessage = "Solo se permiten números")]
 		public float Peso { get; set; }
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
 		[MaxLength(7, ErrorMessage = "Escriba un máximo de {1} caracteres.")]
@@ -38,8 +37,10 @@ namespace MascotaFeliz.App.Dominio {
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
 		public EstadoAnimo EstadoAnimo { get; set; }
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
+		[RegularExpression("[A-Za-z ñÑ ÁáÉéÍíÓóÚú]*", ErrorMessage = "Solo se permiten letras")]
 		public string Medicamentos { get; set; }
 		[Required(ErrorMessage = "Este campo es obligatorio.")]
+		[RegularExpression("[A-Za-z ñÑ ÁáÉéÍíÓóÚú.]*", ErrorMessage = "Solo se permiten letras")]
 		public string Recomendaciones { get; set; }
 	}
 

@@ -1,6 +1,7 @@
 ﻿@page
 @model MascotaFeliz.App.Frontend.Pages.EditarMascotaModel
 @{
+    int mascotaId=Model.Mascota.Id;
 }
 
 <!DOCTYPE html>
@@ -74,5 +75,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Modificar</button>
+            <a class="btn btn-primary table-btn" asp-page="./Registros/ListaRegistros" asp-route-mascotaId="@mascotaId">Registros</a>
         </div>
+
     </form>

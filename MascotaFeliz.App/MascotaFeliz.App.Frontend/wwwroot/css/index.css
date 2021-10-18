@@ -29,6 +29,7 @@ h2 {
 
 p {
     font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    text-align: center;
 }
 
 .illustration {
@@ -66,6 +67,13 @@ p {
     margin-top: 100px;
 }
 
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 540px);
+    gap: 100px;
+    place-content: center;
+}
+
 .img-vet {
     width: 70%;
 }
@@ -95,11 +103,6 @@ h3 {
     margin-left: 60px;
 }
 
-.links {
-    margin-right: 20px;
-    text-align: center;
-}
-
 #thumbnail {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
@@ -115,10 +118,6 @@ h3 {
     padding: 10px;
 }
 
-.cardLinks {
-    margin-left: 60px;
-}
-
 .text-center {
     margin: auto;
 }
@@ -127,7 +126,9 @@ h3 {
     font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 500;
     font-size: 15px;
-  }
+    margin-left: 52px;
+    margin-bottom: 3px;
+}
 
 /* FIN GRILLA DE TARJETAS */
 
@@ -192,6 +193,25 @@ h3 {
 
 .et_clickable {
     cursor: pointer;
+}
+
+.et_pb_text_21 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(
+    90deg,#1d2b60 50%,#316eff 100%);
+    border-radius: 80px 80px 80px 80px;
+    overflow: hidden;
+    padding-top: 16px!important;
+    padding-right: 30px!important;
+    padding-bottom: 16px!important;
+    padding-left: 30px!important;
+    margin-bottom: 0px!important;
+    margin-top: -40px;
+    box-shadow: 0px 12px 18px -6px rgb(49 110 255 / 40%);
+    transition: padding 300ms ease 0ms,box-shadow 300ms ease 0ms;
 }
 
 /* FIN BARRAS HORIZONTALES */

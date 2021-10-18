@@ -1,0 +1,51 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaRegistrosModel
+@{
+    ViewData["Title"] = "Constantes Vitales";
+    int mascotaId= Model.Mascota.Id;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario para la adición de propietarios</title>
+    <link rel="stylesheet" href="~/css/properties.css" />
+</head>
+
+<div class="contenedor">
+    <header class="header">
+        <h1 id="title" class="text-center">Constantes vitales de la mascota</h1>
+        <p id="description" class="description text-center">Visualiza las constantes vitales de la mascota.</p>
+    </header>
+
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th style="text-align: center;">MascotaId</th>
+                <th style="text-align: center;">Fecha Visita</th>
+                <th style="text-align: center;">Temperatura (°C)</th>
+                <th style="text-align: center;">Peso (Kg)</th>
+                <th style="text-align: center;">Frecuencia Respiratoria</th>
+                <th style="text-align: center;">Frecuencia Cardiaca</th>
+                <th style="text-align: center;">Estado Animo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var registro in Model.Registros) {
+                <tr>
+                    <td style="text-align: center;">@registro.MascotaId</td>
+                    <td style="text-align: center;">@registro.FechaHora</td>
+                    <td style="text-align: center;">@registro.Temperatura</td>
+                    <td style="text-align: center;">@registro.Peso</td>
+                    <td style="text-align: center;">@registro.FrecuenciaRespiratoria</td>
+                    <td style="text-align: center;">@registro.FrecuenciaCardiaca</td>
+                    <td style="text-align: center;">@registro.EstadoAnimo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-primary table-btn" asp-page="../ListaMascota" asp-route-mascotaId="@mascotaId">Regresar</a>
+</div>

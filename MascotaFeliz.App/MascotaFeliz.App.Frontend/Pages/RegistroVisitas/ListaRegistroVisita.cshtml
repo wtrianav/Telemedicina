@@ -68,16 +68,16 @@
             <label id="label" asp-for="RegistroVisita.EstadoAnimo">Estado de ánimo</label>
             <select type="text" asp-for="RegistroVisita.EstadoAnimo" name="EstadoAnimo" id="EstadoAnimo" class="form-control" required="">
                 <option disabled="" selected="" value="">Seleccione el estado de ánimo</option>
-                <option value="Tranquilo">Tranquilo</option>
-                <option value="Hiperactivo">Hiperactivo</option>
-                <option value="Asustado">Asustado</option>
-                <option value="Nervioso">Nervioso</option>
-                <option value="Agresivo">Agresivo</option>
-                <option value="Triste">Triste</option>
-                <option value="Aislado">Aislado</option>
-                <option value="Sin apetito">Sin apetito</option>
-                <option value="Ansioso">Ansioso</option>
-                <option value="Deprimido">Deprimido</option>
+                <option value="0">Tranquilo</option>
+                <option value="1">Hiperactivo</option>
+                <option value="2">Asustado</option>
+                <option value="3">Nervioso</option>
+                <option value="4">Agresivo</option>
+                <option value="5">Triste</option>
+                <option value="6">Aislado</option>
+                <option value="7">Sin apetito</option>
+                <option value="8">Ansioso</option>
+                <option value="9">Deprimido</option>
             </select>
             <span asp-validation-for="RegistroVisita.EstadoAnimo" class="text-danger"></span>
         </div>

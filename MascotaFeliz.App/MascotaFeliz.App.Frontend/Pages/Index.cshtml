@@ -70,21 +70,21 @@
 
     <section class="main-container">
         <h2 class="our-services">Nuestros servicios</h2>
+        
         <div class="fullCard" id="thumbnail">
             <div class="cardContent">
                 <div class="cardText">
-                    <h3>Hospitalización</h3>
+                    <h3>Propietarios</h3>
                     <div>
-                        <img src="~/images/icons/2x/veterinarian-icon-1.png" alt="jarabe-para-mascotas" class="icon">
+                        <img src="~/images/icons/2x/veterinarian-icon-8.png" alt="jarabe-para-mascotas" class="icon">
                     </div>
                     <hr>
-                    <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-                            <strong>Stanford University</strong>.</em>
+                    <p><em>Ingresa nuevos propietarios y consulta los datos de todos los propietarios existentes en veterinaria
+                            <strong>Mascota Feliz</strong>.</em>
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="/Propietarios/ListaPropietario" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
@@ -92,18 +92,53 @@
         <div class="fullCard" id="thumbnail">
             <div class="cardContent">
                 <div class="cardText">
-                    <h3>Citas</h3>
+                    <h3>Mascotas</h3>
+                    <div>
+                        <img src="~/images/icons/2x/veterinarian-icon-15.png" alt="jarabe-para-mascotas" class="icon">
+                    </div>
+                    <hr>
+                    <p><em>Ingresa nuevas mascotas y consulta los datos de todos las mascotas existentes en veterinaria
+                            <strong>Mascota Feliz</strong>.</em>
+                    </p>
+                </div>
+                <div class="cardLinks">
+                    <a asp-page="/Mascotas/ListaMascota" target="" class="btn btn-primary">INGRESAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullCard" id="thumbnail">
+            <div class="cardContent">
+                <div class="cardText">
+                    <h3>Veterinarios</h3>
+                    <div>
+                        <img src="~/images/icons/2x/veterinarian-icon-9.png" alt="jarabe-para-mascotas" class="icon">
+                    </div>
+                    <hr>
+                    <p><em>Ingresa nuevos veterinarios y consulta los datos de todos los veterinarios existentes en veterinaria
+                            <strong>Mascota Feliz</strong>.</em>
+                    </p>
+                </div>
+                <div class="cardLinks">
+                    <a asp-page="/Veterinarios/ListaVeterinario" target="" class="btn btn-primary">INGRESAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullCard" id="thumbnail">
+            <div class="cardContent">
+                <div class="cardText">
+                    <h3>Visitas</h3>
                     <div>
                         <img src="~/images/icons/2x/veterinarian-icon-16.png" alt="jarabe-para-mascotas" class="icon">
                     </div>
                     <hr>
-                    <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-                            <strong>Stanford University</strong>.</em>
+                    <p><em>Ingresa nuevas visitas y consulta los registros de todas las visitas efectuadas por veterinaria
+                            <strong>Mascota Feliz</strong>.</em>
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="/RegistroVisitas/ListaRegistroVisita" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
@@ -121,46 +156,7 @@
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="fullCard" id="thumbnail">
-            <div class="cardContent">
-                <div class="cardText">
-                    <h3>Anestésicos</h3>
-                    <div>
-                        <img src="~/images/icons/2x/veterinarian-icon-9.png" alt="jarabe-para-mascotas" class="icon">
-                    </div>
-                    <hr>
-                    <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-                            <strong>Stanford University</strong>.</em>
-                    </p>
-                </div>
-                <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="fullCard" id="thumbnail">
-            <div class="cardContent">
-                <div class="cardText">
-                    <h3>Nutrición</h3>
-                    <div>
-                        <img src="~/images/icons/2x/veterinarian-icon-7.png" alt="jarabe-para-mascotas" class="icon">
-                    </div>
-                    <hr>
-                    <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-                            <strong>Stanford University</strong>.</em>
-                    </p>
-                </div>
-                <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
@@ -178,8 +174,7 @@
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
@@ -187,7 +182,7 @@
         <div class="fullCard" id="thumbnail">
             <div class="cardContent">
                 <div class="cardText">
-                    <h3>Visitas</h3>
+                    <h3>Hospitalización</h3>
                     <div>
                         <img src="~/images/icons/2x/veterinarian-icon-2.png" alt="jarabe-para-mascotas" class="icon">
                     </div>
@@ -197,8 +192,7 @@
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
@@ -216,12 +210,31 @@
                     </p>
                 </div>
                 <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="btn btn-primary">LEER
-                        MÁS</a>
+                    <a asp-page="" target="" class="btn btn-primary">INGRESAR</a>
                 </div>
             </div>
         </div>
+    </section>
 
+    <section class="footer-container">
+        <div class="img-mascota">
+            <img src="~/images/illustrations/1x/veterinarian-illustration-2.png" alt="veterinario-atendiendo-mascota"
+                class="illustration">
+        </div>
+        <div class="text-center">
+            <h2 class="">Veterinarios altamente capacitados</h2>
+            <p>
+                Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero
+                malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed
+                magna dictum porta.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="et_pb_module et_pb_text et_pb_text_21 et_hover_enabled et_clickable  et_pb_text_align_right et_pb_bg_layout_dark">
+            <div class="et_pb_text_inner">Conoce nuestros veterinarios</div>
+        </div>
     </section>
 
     <section class="container">

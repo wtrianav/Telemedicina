@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MascotaFeliz.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace MascotaFeliz.App.Persistencia {
 
@@ -57,6 +58,15 @@ namespace MascotaFeliz.App.Persistencia {
             }
 
             return mascotaEncontrada;
+        }
+
+        IEnumerable<RegistroVisita> IRepositorioMascota.GetRegistrosMascota(int idMascota)
+        {
+            var mascota = _appContext.Mascotas.Where(s => s.Id==idMascota)
+                                               .Include(s=>s.Visitas)
+                                               .FirstOrDefault();
+
+            return mascota.Visitas;
         }
     }
 }

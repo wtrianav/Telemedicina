@@ -43,11 +43,11 @@
             <label id="label" asp-for="Mascota.TipoMascota">Tipo</label>
             <select asp-for="Mascota.TipoMascota" name="Mascota.TipoMascota" id="dropdown" class="form-control" required="">
                 <option disabled="" selected="" value="">Seleccione el tipo de mascota</option>
-                <option value="Canino">Canino</option>
-                <option value="Felino">Felino</option>
-                <option value="Ave">Ave</option>
-                <option value="Roedor">Roedor</option>
-                <option value="Pez">Pez</option>
+                <option value="0">Canino</option>
+                <option value="1">Felino</option>
+                <option value="2">Ave</option>
+                <option value="3">Roedor</option>
+                <option value="4">Pez</option>
             </select>
             <span asp-validation-for="Mascota.TipoMascota" class="text-danger"></span>
         </div>
@@ -62,8 +62,8 @@
             <label id="label" asp-for="Mascota.Sexo">Sexo</label>
             <select asp-for="Mascota.Sexo" name="Mascota.Sexo" id="dropdown" class="form-control" required="">
                 <option disabled="" selected="" value="">Selecciona una opción</option>
-                <option value="0">Macho</option>
-                <option value="1">Hembra</option>
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
             </select>
             <span asp-validation-for="Mascota.Sexo" class="text-danger"></span>
         </div>
