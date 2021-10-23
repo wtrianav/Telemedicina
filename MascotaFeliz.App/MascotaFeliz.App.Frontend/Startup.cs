@@ -25,6 +25,7 @@ namespace MascotaFeliz.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllersWithViews();
             services.AddScoped<IRepositorioPropietario, RepositorioPropietario>();
             services.AddScoped<IRepositorioMascota, RepositorioMascota>();
             services.AddScoped<IRepositorioVeterinario, RepositorioVeterinario>();
@@ -47,6 +48,7 @@ namespace MascotaFeliz.App.Frontend
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -55,6 +57,11 @@ namespace MascotaFeliz.App.Frontend
 
             app.UseEndpoints(endpoints =>
             {
+                
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Conference}/{action=Index}/{id?}"
+                );
                 endpoints.MapRazorPages();
             });
         }

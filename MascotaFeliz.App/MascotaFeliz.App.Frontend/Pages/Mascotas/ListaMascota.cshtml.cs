@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
-namespace MascotaFeliz.App.Frontend.Pages
-{
+namespace MascotaFeliz.App.Frontend.Pages {
+
+    [Authorize]
     public class ListaMascotaModel : PageModel {
     
     private readonly IRepositorioMascota _repoMascota;

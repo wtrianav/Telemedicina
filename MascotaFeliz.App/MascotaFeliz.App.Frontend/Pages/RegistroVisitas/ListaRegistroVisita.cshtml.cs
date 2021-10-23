@@ -3,8 +3,11 @@ using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MascotaFeliz.App.Frontend.Pages {
+
+    [Authorize]
     public class ListaRegistroVisitaModel : PageModel {
 
     private readonly IRepositorioRegistroVisita _repoRegistroVisita;

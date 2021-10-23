@@ -14442,8 +14442,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\Veterinarios\\ListaVeterinario.cshtml",
       "TargetPath": "Pages\\Veterinarios\\ListaVeterinario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14454,6 +14474,21 @@
     {
       "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\Mascotas\\ListaMascota.cshtml",
       "TargetPath": "Pages\\Mascotas\\ListaMascota.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14479,6 +14514,21 @@
     {
       "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\RegistroVisitas\\ListaRegistroVisita.cshtml",
       "TargetPath": "Pages\\RegistroVisitas\\ListaRegistroVisita.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
       "FileKind": "mvc"
     }
   ],

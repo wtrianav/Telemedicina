@@ -7,14 +7,15 @@
     <title>@ViewData["Title"]</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/layout.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+        rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-0">
-            <img src="~/images/icons/2x/veterinarian-icon-14.png" alt="logo-veterinaria" class="logo">
+            <img src="~/images/icons/2x/veterinarian-icon-11.png" alt="logo-veterinaria" class="logo">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Veterinaria Mascota Feliz</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -44,6 +45,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacidad</a>
                         </li>
+                        <li class="nav-item">
+                            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                                asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+                                <button id="logout" type="submit"
+                                    class="nav-link btn btn-link text-dark">Cerrar sesión</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -69,12 +77,12 @@
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function () {
-                $('#example').DataTable({
-                    language: {
-                        url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
-                    }
-                });
+            $('#example').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+                }
             });
+        });
     </script>
 
     @RenderSection("Scripts", required: false)

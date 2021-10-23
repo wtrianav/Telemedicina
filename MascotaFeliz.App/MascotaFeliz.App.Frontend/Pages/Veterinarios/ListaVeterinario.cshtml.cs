@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 
-namespace MascotaFeliz.App.Frontend.Pages
-{
+namespace MascotaFeliz.App.Frontend.Pages {
+
+    [Authorize]
     public class ListaVeterinarioModel : PageModel {
     private readonly IRepositorioVeterinario _repoVeterinario;
     public IEnumerable<Veterinario> Veterinarios { get; set;}
